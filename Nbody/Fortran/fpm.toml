@@ -1,0 +1,15 @@
+name = "Nbody"
+version = "0.1.0"
+license = "MIT"
+author = "Stavros Meskos"
+maintainer = "stameskos@gmail.com"
+copyright = "2020 Stavros Meskos"
+
+[library]
+source-dir="src"
+
+[[executable]]
+name="nbody"
+source-dir="app"
+main="main.f90"
+

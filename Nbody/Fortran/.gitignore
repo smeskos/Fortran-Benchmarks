@@ -1,0 +1,8 @@
+#fpm build dir
+build/
+
+# vs code debug settings
+.vscode/
+
+# .mod files
+src/*.mod

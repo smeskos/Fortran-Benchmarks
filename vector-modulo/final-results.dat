@@ -1,0 +1,63 @@
+C vs Cpp vs Fortran (averaged results over ten runs)
+
+C average:
+real	0m0.2553s
+user	0m0.2525s
+
+Cpp average:
+real	0m0.2561s
+user	0m0.2547s
+
+Fortran average:
+real	0m0.2971s
+user	0m0.2942s
+
+
+		Cpp/C	Fortran/C	Fortran/Cpp
+real |	1.003	  1.1637	   1.16
+
+
+C 	is 1.003 	times faster than Cpp
+C 	is 1.1637 	times faster than Fortran
+Cpp is 1.16 	times faster than Fortran
+
+
+
+System info: (command: inxi -Fxz)
+
+System:
+  Host: acer Kernel: 4.15.0-96-generic x86_64 bits: 64 compiler: gcc 
+  v: 7.5.0 Desktop: Cinnamon 4.0.10 Distro: Linux Mint 19.1 Tessa 
+  base: Ubuntu 18.04 bionic 
+Machine:
+  Type: Laptop System: Acer product: Aspire E1-772G v: V1.03 
+  serial: <filter> 
+  Mobo: Acer model: EA70_HW v: Type2 - Board Version serial: <filter> 
+  UEFI: Insyde v: 1.03 date: 01/28/2014  
+CPU:
+  Topology: Dual Core model: Intel Core i5-4200M bits: 64 type: MT MCP 
+  arch: Haswell rev: 3 L2 cache: 3072 KiB 
+  flags: lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3 vmx bogomips: 19954 
+  Speed: 798 MHz min/max: 800/3100 MHz Core speeds (MHz): 1: 798 2: 798 
+  3: 798 4: 798 
+
+
+Compilers info:
+
+Cpp:
+g++-10 (Ubuntu 10.1.0-2ubuntu1~18.04) 10.1.0
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+C:
+gcc-10 (Ubuntu 10.1.0-2ubuntu1~18.04) 10.1.0
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Fortran:
+GNU Fortran (Ubuntu 10.1.0-2ubuntu1~18.04) 10.1.0
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.

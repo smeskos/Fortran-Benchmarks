@@ -1,0 +1,10 @@
+0.01 3 20           ! gravitational constant, number of bodies, time stpe
+1                   ! 1st body: mass
+0 0 0               !           position (x, y, z)
+0.01 0 0            !           velocity (vx, vy, vz)
+0.1                 ! 2nd body
+1 1 0               !
+0 0 0.02            !
+0.001               ! 3rd body
+0 1 1               !
+0.01 -0.01 -0.01    !
