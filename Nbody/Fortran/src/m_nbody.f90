@@ -84,12 +84,12 @@ contains
     end function nbody_constructor
 
 
-    pure subroutine simulate(system)
-        class(t_nbody), intent(inout) :: system
-        call system%accelerate
-        call system%compute_positions
-        call system%compute_velocities
-        call system%check_collisions
+    pure subroutine simulate(self)
+        class(t_nbody), intent(inout) :: self
+        call self%accelerate
+        call self%compute_positions
+        call self%compute_velocities
+        call self%check_collisions
     end subroutine simulate
 
 
@@ -157,7 +157,7 @@ contains
         integer :: funit, fstat, i
         open(newunit=funit, file=fname, iostat=fstat, action='write', &
             access='append', status='unknown')
-        fmt = '(a,1x,i1,1x,a,3(2x,f8.6),1x,a,3(2x,f8.6))'
+        fmt = '(a,1x,i1,1x,a,3(2x,f10.6),1x,a,3(2x,f10.6))'
         write(funit,'(a,1x,i2.2)')'Step:', istep
         do i = 1, self%n_bodies
             associate(b=>self%body(i))

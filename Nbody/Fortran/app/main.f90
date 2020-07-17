@@ -7,7 +7,7 @@ program Nbody
     type(t_nbody) :: system
     integer :: i, funit
 
-    col_names = 'Body   :     x          y        z     |     vx        vy        vz'
+    col_names = 'Body   :        x           y          z     |       vx         vy          vz'
 
     system = nbody_constructor(fin)
 
@@ -16,7 +16,7 @@ program Nbody
     close(funit)
     
     do i = 1, system%ts
-        call simulate(system)
+        call system%simulate()
         call system%output(fout, i)
     end do
 end program Nbody
