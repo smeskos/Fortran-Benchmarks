@@ -19,10 +19,10 @@ module m_nbody
     type :: t_nbody
         private
         real(wp)    :: g_const      ! gravitational constant
-        integer     :: n_bodies
+        integer     :: n_bodies     ! number of bodies
         type(t_body), allocatable   ::  body(:)
 
-        integer, public :: ts ! number of bodies, time step
+        integer, public :: ts       ! time step
         contains
             private
             procedure :: accelerate
